@@ -15,16 +15,15 @@ public final class Main {
 
                 System.out.println(str);
 
-                math.mathStream("0", str);
-                math.mathStream("1", str);
-                math.mathStream("2", str);
-                math.mathStream("3", str);
-                math.mathStream("4", str);
-                math.mathStream("5", str);
-                math.mathStream("6", str);
-                math.mathStream("7", str);
-                math.mathStream("8", str);
-                math.mathStream("9", str);
-
+                math.mathStream('0', str);
+                math.mathStream('1', str);
+                math.mathStream('2', str);
+                math.mathStream('3', str);
+                math.mathStream('4', str);
+                math.mathStream('5', str);
+                math.mathStream('6', str);
+                math.mathStream('7', str);
+                math.mathStream('8', str);
+                math.mathStream('9', str);
         }
 }

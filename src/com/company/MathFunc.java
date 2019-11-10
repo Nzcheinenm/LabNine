@@ -1,8 +1,6 @@
 package com.company;
 
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Stream;
 
 
 class MathFunc {
@@ -14,7 +12,8 @@ class MathFunc {
          * Минимальная длина.
          */
         private static int minLength = 60;
-        public String mathFunction() {
+
+        String mathFunction() {
 
                 maxLength -= minLength;
                 int randomNumberLength = (int) ((Math.random() * ++maxLength)
@@ -29,14 +28,18 @@ class MathFunc {
                 return Arrays.toString(str);
         }
 
-        void mathStream(final String num, final String strArr) {
-                List<String> asd = Arrays.asList(strArr.split("," + " "));
-                Stream stream = asd.stream();
+        void mathStream(final char num, final String strArr) {
+
                 int lengthArr = strArr.length() / 3;
-                long countValue = stream.filter(e -> e.equals(num)).count();
-                float proc = (float) (countValue * 100) / lengthArr;
+
+                long countValue = strArr.chars()
+                    .mapToObj(c -> (char) c)
+                    .filter(e -> e.equals(num))
+                    .count();
+
+                float procentNum = (float) (countValue * 100) / lengthArr;
                 System.out.println(num + " встречается - " + countValue
-                                  + " раза или " + proc + " %");
+                    + " раза или " + procentNum + " %");
         }
 
 }
